@@ -30,13 +30,14 @@ public class DBService {
         Tecnico t1 = new Tecnico(null, "Michael Rafael", "041.316.384-95", "81 98701-2423");
         Tecnico t2 = new Tecnico(null, "Hugo Chaves", "712.723.400-07", "81 98701-8888");
         Cliente c1 = new Cliente(null, "Rosangela Conceição", "044.480.044-14", "81 98645-5885");
+        Cliente c2 = new Cliente(null, "Angela Pereira", "177.393.890-80", "81 98645-5885");
         OrdemServico os1 = new OrdemServico(null, Prioridade.ALTA, "Teste create OD", Status.ANDAMENTO, t1, c1);
 
         t1.getList().add(os1);
         c1.getList().add(os1);
 
         tecnicoRepository.saveAll(Arrays.asList(t1, t2));
-        clienteRepository.saveAll(Arrays.asList(c1));
+        clienteRepository.saveAll(Arrays.asList(c1, c2));
         ordemServicoRepository.saveAll(Arrays.asList(os1));
 
     }
