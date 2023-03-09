@@ -45,7 +45,6 @@ public class OrdemServicoController {
     @PutMapping
     public ResponseEntity<OrdemServicoDTO> upDateOrdemServico(@Valid @RequestBody OrdemServicoDTO osDTO) {
         osDTO = new OrdemServicoDTO(ordemServicoService.upDateOrdemServico(osDTO));
-        return ResponseEntity.ok().body(osDTO);
+        return  ResponseEntity.ok().body(osDTO);
     }
-
 }
